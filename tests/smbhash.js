@@ -14,8 +14,7 @@
  * Copyright (C) 2011-2012  Joshua M. Clulow <josh@sysmgr.org>
  */
 
-var lmhash = require('..').smbhash.lmhash;
-var nthash = require('..').smbhash.nthash;
+const { lmhash, nthash } = require('../lib/smbhash');
 
 var GOOD = [
   { password: 'pass123',

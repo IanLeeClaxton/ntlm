@@ -46,7 +46,7 @@ module.exports.type2_success = function(test) {
   test.expect(GOOD.length * 1);
   for (var i = 0; i < GOOD.length; i++) {
     var g = GOOD[i];
-    var inbuf = new Buffer(g.messages[1], 'base64');
+    var inbuf = Buffer.from(g.messages[1], 'base64');
     var out = $.decodeType2(inbuf);
     test.strictEqual(out.toString('binary'), g.nonce);
   }
